@@ -61,7 +61,7 @@
       become: yes
     - name: Checkout Git repo
       git:
-        repo: "https://github.com/vfalada/4IT572_docker.git"
+        repo: "https://github.com/goalman96/4IT572_ansible.git"
         dest: ./app
     - name: Build eshop docker
       shell: cd app && docker build -t eshop:latest .
