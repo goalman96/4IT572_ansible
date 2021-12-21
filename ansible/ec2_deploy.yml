@@ -14,9 +14,9 @@
         count: 1
         group: eshop
         wait: true
-        aws_access_key: "AKIAUUMPAG6EST7HT3NN"
-        aws_secret_key: "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"
-        security_token: "FwoGZXIvYXdzEIj//////////wEaDFmAlnky337oIB2b2iK3ARyQNsH+DigEvfFst01R4Q9reMzskfx+xzssI7grugLb8CXQY8ZOyFwZfTw9zb3aHZQj7GobGNkBwmtT/r60me/8yIciDkfJ1+c6pzRXs//62c2dHSQjaEtzBuoifIn3omKGyC/Zl5YVRddqA4NtxmrPvCJWei8YY7ODaWzsai1aXWgY/8Oath8TQ2QFVdHEHlxii4MlXnZHfBz5M77jBV7Uffdk4C7rlqjnYvLPYGScjTMldMmGrijzsKqNBjItJH4x/QzwCVB2kSk9To1Qz79Gld7rIjIMLYY7ZnrfWfXre3YoSRYgU4MjaVr9"
+        aws_access_key: ""
+        aws_secret_key: ""
+        security_token: ""
       register: ec2
 
     - name: Add new instance to host group
@@ -61,7 +61,7 @@
       become: yes
     - name: Checkout Git repo
       git:
-        repo: "https://github.com/goalman96/4IT572_ansible.git"
+        repo: "https://github.com/vfalada/4IT572_docker.git"
         dest: ./app
     - name: Build eshop docker
       shell: cd app && docker build -t eshop:latest .
